@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% load bootstrap_tags %}
+{% block content %}
+
+<!-- Main -->
+<main class="login">
+
+  <!-- Container -->
+  <div class="container">
+
+    <!-- Row -->
+    <div class="row">
+
+      <div class="login__wrapper">
+
+        <section class="login__form-wrapper">
+
+          <h3>Sign up now!</h3>
+
+        <form role="form" method="post" action="{% url 'register' %}">
+            {% csrf_token %}
+            {{ form | as_bootstrap }}
+            <div class="form-group">
+              <button type="submit" class="btn btn-primary">Create account</button>
+            </div>
+        </form>
+
+      </section>
+
+    </div>
+
+  </div>
+  <!-- /Row -->
+
+</div>
+<!-- /Container -->
+
+</main>
+<!-- Main -->
+
+{% endblock %}

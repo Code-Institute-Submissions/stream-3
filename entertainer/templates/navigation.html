@@ -1,0 +1,28 @@
+<!-- Logo -->
+<div class="col-lg-2 col-md-2">
+    <div class="home-header__logo"><a href="/"><img src="http://res.cloudinary.com/dmhouhr7v/image/upload/v1498762041/15442176_204747639932915_6612420024311324220_n_ogitbh.png" alt=""></a></div>
+</div>
+<!-- /Logo -->
+
+<!-- Hamburger icon -->
+<div class="hamburger-menu">
+    <div class="bar"></div>
+</div>
+<!--/ Hamburger icon -->
+
+<!-- Navigation -->
+<div class="col-lg-10 col-md-10">
+    <nav class="home-header__navigation">
+        <ul>
+            <li><a href="/">Home</a></li>
+            {% if user.is_authenticated %}
+                <li><a href="{% url 'profile' %}">Profile</a></li>
+                <li><a href="{% url 'logout' %}">Log Out</a></li>
+            {% else %}
+                <li><a href="{% url 'login' %}">Log In</a></li>
+                <li><a href="{% url 'register' %}" class="home-header__cta">Register</a></li>
+            {% endif %}
+        </ul>
+    </nav>
+</div>
+<!-- Navigation -->

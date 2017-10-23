@@ -1,0 +1,98 @@
+{% extends 'base.html' %}
+{% block content %}
+
+	<!-- Main header -->
+	<section class="home-header">
+
+		<!-- Container -->
+		<div class="container">
+
+			<!-- Row -->
+			<div class="row">
+				{% include "navigation.html" %}
+			</div>
+			<!-- /Row -->
+
+			<div class="row">
+				<div class="home-header__intro">
+					<h3>Welcome to Bookah.ie</h3>
+					<p>Find the perfect entertainment for your wedding or event</p>
+				</div>
+			</div>
+
+		</div>
+		<!-- /Container -->
+
+	</section>
+	<!-- /Main header -->
+
+	<!-- Container -->
+	<div class="container">
+
+		<!-- Row -->
+		<div class="row">
+
+			<!-- Cards -->
+			<section class="cards">
+
+				<header class="col-md-12 cards__heading">
+							<h3>Everything You Need</h3>
+					</header>
+
+				<!-- Entertainer loop -->
+				{% for entertainer in entertainers %}
+
+								<!-- Card wrapper -->
+								<div class="col-md-3">
+
+									<!-- Card item -->
+									<figure>
+
+										<!-- Card img -->
+
+						<a href="{% url 'entertainer_detail' pk=entertainer.pk %}">
+							{% if entertainer.image %}
+							<img src="/media/{{ entertainer.image}}">
+							{% else %}
+							<img src="http://via.placeholder.com/350x250" width="100%">
+							{% endif %}
+						</a>
+						<!-- Card img -->
+
+						<!-- Card info -->
+						<figcaption>
+							<span>{{ entertainer.entertainer_type }}</span>
+							<h3><a href="{% url 'entertainer_detail' pk=entertainer.pk %}">{{ entertainer.name }}</a></h3>
+						</figcaption>
+						<!-- /Card info -->
+
+					</figure>
+					<!-- /Card item -->
+
+				</div>
+				<!-- /Card wrapper -->
+				{% endfor %}
+			</section>
+			<!-- /Cards -->
+
+		</div>
+		<!-- /Row -->
+
+				<!-- View more CTA -->
+				<div class="col-md-12 text-center">
+					<a href="/entertainers" class="btn btn-primary">View All</a>
+				</div>
+				<!-- /View more CTA -->
+
+			</div>
+			<!-- /Main wrapper -->
+
+		</div>
+		<!-- /Row -->
+
+	</div>
+	<!-- /Container -->
+
+    {% include "footer.html" %}
+
+{% endblock content %}

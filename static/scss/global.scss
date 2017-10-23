@@ -1,0 +1,17 @@
+@import '../vendor/bootstrap/dist/css/bootstrap.css';
+
+@import 'utilities/mixins';
+@import 'utilities/variables';
+
+@import 'global/reset';
+@import 'global/base';
+@import 'global/home-header';
+@import 'global/inner-header';
+@import 'global/footer';
+@import 'global/buttons';
+@import 'global/cards';
+
+@import 'pages/home';
+@import 'pages/login';
+@import 'pages/register';
+@import 'pages/contact';

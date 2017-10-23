@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+  {% include "inner-navigation.html" %}
+
+	<!-- Container -->
+	<div class="container">
+
+		<!-- Row -->	
+		<div class="row">
+
+			<!-- Main wrapper -->
+			<div class="main-wrapper">
+
+				<h2>Success!</h2>
+				<p>You are logged in as {{ user.email }} </p>
+				<a href="{% url 'entertainer_new' %}" class="btn btn-primary">Create Profile</a>
+
+			</div>
+			<!-- /Main wrapper -->
+
+		</div>
+		<!-- /Row -->
+
+	</div>
+	<!-- /Container -->
+{% endblock %}

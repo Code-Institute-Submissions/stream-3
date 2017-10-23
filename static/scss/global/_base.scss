@@ -1,0 +1,32 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700|Playfair+Display:400,400i,700);
+
+$Montserrat: 'Montserrat', sans-serif;
+$Playfair: 'Playfair Display', serif;
+
+body{
+	font-family: $Playfair;
+	font-size:14px;
+}
+
+a:hover{
+	text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6{
+	font-family: $Montserrat;
+}
+
+h1{ @include font-size(36px); @include line-height (56px); margin-top: 0; margin-bottom: 40px; }
+h2{ @include font-size(30px); @include line-height (48px); margin-top: 0; margin-bottom: 20px; }
+h3{ @include font-size(20px); @include line-height (32px); margin-top:20px; margin-bottom: 20px; }
+h4{ @include font-size(14px); @include line-height (22px); margin-top: 0; margin-bottom: 20px; }
+h5{ @include font-size(15px); @include line-height (20px); margin-top: 0; margin-bottom: 20px; }
+h6{ @include font-size(14px); @include line-height (18px); margin-top: 0; margin-bottom: 20px; }
+
+.heading-border-top{
+	font-size:2.2em;
+	margin-bottom:30px;
+	position:relative;
+}
+
+p{margin:20px 0;}

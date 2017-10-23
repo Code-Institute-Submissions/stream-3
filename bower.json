@@ -1,0 +1,21 @@
+{
+  "name": "bookah",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "stevenkirwan <kirwan.ste@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/stevenkirwan/bookah",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "static",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "v4.0.0-alpha.6"
+  }
+}

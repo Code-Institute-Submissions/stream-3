@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block content %}
+	
+	{% include "inner-navigation.html" %}
+		
+	<!-- Container -->
+	<div class="container">
+
+		<!-- Row -->	
+		<div class="row">
+
+			<!-- Main wrapper -->
+			<section class="main-wrapper entertainer-details">
+
+				<div class="col-md-4 entertainer-details__main">
+					<img src="/media/{{ entertainer.image}}">
+					<h1>{{ entertainer.name }}</h1>
+					<h3>{{ entertainer_type }}</h3>
+					<p><strong>Location:</strong> {{ entertainer.location }}</p>
+					<p><strong>Location:</strong> {{ entertainer.email }}</p>
+					<a href="{{ entertainer.facebook }}"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+					<a href="{{ entertainer.twitter }}"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+				</div>
+
+				<div class="col-md-8">
+					<h3>About Us</h3>
+					<p>{{ entertainer.bio|linebreaks }}</p>
+				</div>
+
+		    </section>
+		    <!-- /Main wrapper -->
+
+		</div>
+		<!-- /Row -->
+
+	</div>
+	<!-- /Container -->
+
+    {% include "footer.html" %}
+
+{% endblock %}

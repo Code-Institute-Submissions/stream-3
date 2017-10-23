@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% load bootstrap_tags %}
+{% block content %}
+
+  <!-- Main -->
+  <main class="login">
+
+    <!-- Container -->
+    <div class="container">
+
+      <!-- Row -->
+      <div class="row">
+
+        <div class="login__wrapper">
+
+          <section class="login__form-wrapper">
+
+            <h3>Welcome Back!</h3>
+
+            <form role="form" method="post" action="{% url 'login' %}">
+              <h3>Login to your account</h3>
+              <div class="login__form-row">
+                {% csrf_token %}
+              </div>
+              {{ form| as_bootstrap }}
+              <div class="form-group">
+                <button type="submit" class="btn btn-primary">Login</button>
+              </div>
+            </form>
+
+            <small>No account? <a href="/register/">Register here</a></small>
+
+          </section>
+
+        </div>
+
+      </div>
+      <!-- /Row -->
+
+    </div>
+    <!-- /Container -->
+
+  </main>
+  <!-- Main -->
+
+{% endblock %}

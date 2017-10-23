@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% block content %}
+
+	{% include "inner-navigation.html" %}
+
+	<!-- Container -->
+	<div class="container">
+
+		<!-- Row -->
+		<div class="row">
+			
+			<!-- Cards -->
+			<section class="cards">
+
+				{% for entertainer in entertainers %}
+					<!-- Card wrapper -->
+					<div class="col-md-3">
+
+						<!-- Card item -->
+						<figure>
+
+							<!-- Card img -->
+							<a href="{% url 'entertainer_detail' pk=entertainer.pk %}">
+								{% if entertainer.image %}
+								<img src="/media/{{ entertainer.image}}">
+								{% else %}
+								<img src="http://via.placeholder.com/350x250" width="100%">
+								{% endif %}
+							</a>
+							<!-- Card img -->
+
+							<!-- Card info -->
+							<figcaption>
+								<span>{{ entertainer.entertainer_type }}</span>
+								<h3><a href="{% url 'entertainer_detail' pk=entertainer.pk %}">{{ entertainer.name }}</a></h3>
+							</figcaption>
+							<!-- /Card info -->
+
+						</figure>
+						<!-- /Card item -->
+
+					</div>
+					<!-- /Card wrapper -->
+				{% endfor %}
+
+			</section>
+			<!-- /Cards -->
+			
+		</div>
+		<!-- /Row -->
+
+	</div>
+	<!-- /Container -->
+
+	{% include "footer.html" %}
+
+{% endblock content %}

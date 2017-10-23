@@ -1,0 +1,35 @@
+.home-intro{
+    background:#f0f0f0;
+    padding:40px 15px 0 15px;
+    text-align:center;
+    width:100%;
+    .home-intro__wrapper{
+        max-width:600px;
+        margin:0 auto;
+        h3{
+            position:relative;
+            @include font-size(28px);
+            &:after {
+                content: "";
+                left:0;
+                right:0;
+                position:absolute;
+                border-bottom: .1rem solid black;
+                margin: 0 auto;
+                bottom:-20px;
+                width: 4rem;
+                @media screen and (max-width:992px) {
+                    top:-10px;
+                }
+            }
+        }
+        p{
+            @include font-size(16px);
+            margin-top:40px;
+        }
+        img{
+            margin-top:40px;
+            width:100%;
+        }
+    }
+}

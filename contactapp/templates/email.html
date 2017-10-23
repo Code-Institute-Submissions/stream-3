@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block content %}
+	{% include "inner-navigation.html" %}
+
+	<!-- Container -->
+	<div class="container">
+
+		<!-- Row -->	
+		<div class="row">
+
+			<!-- Main wrapper -->
+			<div class="main-wrapper">
+				
+				<h1>Contact Us</h1>
+				<div class="contact">
+					<form method="post">
+						{% csrf_token %}
+						{{ form.as_p }}
+						<div class="form-actions">
+						<button type="submit">Send</button>
+						</div>
+					</form>
+				</div>
+
+			</div>
+			<!-- /Main wrapper -->
+		
+		</div>
+		<!-- /Row -->	
+	
+	</div>
+	<!-- /Container -->
+	
+	{% include "footer.html" %}
+
+{% endblock content %}

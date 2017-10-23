@@ -1,0 +1,49 @@
+<!-- Main header -->
+<section class="inner-header">
+
+    <!-- Container -->
+    <div class="container">
+        
+        <!-- Row -->
+        <div class="row">
+            
+            <!-- Logo -->
+            <div class="col-lg-2 col-md-2">
+                <div class="inner-header__logo"><a href="#"><img src="http://via.placeholder.com/100x80" alt=""></a></div>
+            </div>
+            <!-- /Logo -->
+            
+            <!-- Hamburger icon -->
+            <div class="hamburger-menu">
+                <div class="bar"></div>   
+            </div>
+            <!--/ Hamburger icon -->
+
+            <!-- Navigation -->
+            <div class="col-lg-10 col-md-10">
+                <nav class="inner-header__navigation">
+                <ul>
+                    <li><a href="/">Home</a></li>
+
+                    {% if user.is_authenticated %}
+                    <li><a href="{% url 'profile' %}">Profile</a></li>
+                    <li><a href="{% url 'logout' %}">Log Out</a></li>
+                    {% else %}
+                    <li><a href="{% url 'login' %}">Log In</a></li>
+                    <li><a href="{% url 'register' %}" class="inner-header__cta">Register</a></li>
+                    {% endif %}
+                </ul>
+            </nav>
+            <!-- /Navigation -->
+
+            </div>
+            <!-- Navigation -->
+
+        </div>
+        <!-- /Row -->
+
+    </div>
+    <!-- /Container -->
+
+</section>
+<!-- /Main header -->

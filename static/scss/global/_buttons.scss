@@ -1,0 +1,18 @@
+.btn{
+	background:$green;
+	border:1px solid $green;
+	color:$white;
+	display:inline-block;
+	font-family:$Montserrat;
+	font-weight:bold;
+	padding:20px 30px;
+	margin-top:20px;
+	text-align:center;
+	text-transform:uppercase;
+	width:auto;
+	&:hover, &:focus{
+		background:$green;
+		color:$white;
+		opacity:0.9;
+	}
+}
